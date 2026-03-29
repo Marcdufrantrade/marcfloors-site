@@ -118,17 +118,27 @@ body {
   background: #222;
 }
 
-/* GALLERY */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 15px;
   margin-top: 30px;
 }
 
-.gallery img {
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
   width: 100%;
-  border-radius: 8px;
+  height: 250px;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
 }
 
 /* CONTACT */
