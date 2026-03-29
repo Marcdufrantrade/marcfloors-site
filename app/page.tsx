@@ -14,6 +14,39 @@ export default function HomePage() {
     []
   );
 
+  const reviews = [
+    {
+      name: "Daniel R.",
+      city: "Sacramento, CA",
+      text: "Clean work, strong attention to detail and a final result that completely changed the feel of the space. Very professional from start to finish.",
+    },
+    {
+      name: "Jessica M.",
+      city: "Roseville, CA",
+      text: "The flooring looked excellent when it was done. The layout, transitions and finish all looked sharp and professionally executed.",
+    },
+    {
+      name: "Michael T.",
+      city: "Folsom, CA",
+      text: "Very reliable, easy to communicate with and the quality of the installation stood out immediately. The whole room looked upgraded.",
+    },
+    {
+      name: "Amanda C.",
+      city: "Elk Grove, CA",
+      text: "Professional presentation, clean process and beautiful finished work. You can tell there is real care in the details.",
+    },
+    {
+      name: "Robert L.",
+      city: "Citrus Heights, CA",
+      text: "The final appearance was excellent. Everything looked aligned, balanced and done with experience. Strong workmanship overall.",
+    },
+    {
+      name: "Stephanie W.",
+      city: "Rocklin, CA",
+      text: "Very happy with the result. The flooring looked clean, modern and well finished. Communication was direct and professional.",
+    },
+  ];
+
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const closeLightbox = () => setSelectedIndex(null);
@@ -224,37 +257,46 @@ export default function HomePage() {
           <div className="container">
             <div className="section-heading">
               <span className="section-kicker">Reviews</span>
-              <h2>The kind of result clients want to see</h2>
+              <h2>What clients say about the experience</h2>
               <p>
-                Professional presentation, clean execution and a finished space
-                that feels elevated.
+                Strong workmanship, clean presentation and a result that feels
+                professionally done.
               </p>
             </div>
 
             <div className="reviews-grid">
-              <article className="review-card">
-                <div className="stars">★★★★★</div>
-                <p>
-                  Clean work and strong attention to detail. The final look made
-                  the entire space feel more finished and more valuable.
-                </p>
-              </article>
-
-              <article className="review-card">
-                <div className="stars">★★★★★</div>
-                <p>
-                  Professional communication, dependable process and a result
-                  that looked sharp from the first impression.
-                </p>
-              </article>
-
-              <article className="review-card">
-                <div className="stars">★★★★★</div>
-                <p>
-                  The difference is visible in the alignment, finish quality and
-                  overall appearance of the flooring work.
-                </p>
-              </article>
+              {reviews.map((review, index) => (
+                <article className="review-card" key={`${review.name}-${index}`}>
+                  <div className="stars">★★★★★</div>
+                  <p>{review.text}</p>
+                  <div
+                    style={{
+                      marginTop: "18px",
+                      paddingTop: "16px",
+                      borderTop: "1px solid rgba(17, 24, 32, 0.08)",
+                    }}
+                  >
+                    <strong
+                      style={{
+                        display: "block",
+                        fontSize: "0.98rem",
+                        color: "#1b2128",
+                        marginBottom: "4px",
+                      }}
+                    >
+                      {review.name}
+                    </strong>
+                    <span
+                      style={{
+                        color: "#6a7784",
+                        fontSize: "0.92rem",
+                      }}
+                    >
+                      {review.city}
+                    </span>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -270,15 +312,30 @@ export default function HomePage() {
                 result.
               </p>
               <p>
-                Call or text directly for quotes, project questions and
+                Call, text or email directly for quotes, project questions and
                 scheduling.
               </p>
             </div>
 
             <div className="contact-card">
               <h3>Marc Floors</h3>
+
               <a className="contact-phone" href="tel:+12797901575">
                 (279) 790-1575
+              </a>
+
+              <a
+                href="mailto:contact@marcfloors.com"
+                style={{
+                  display: "inline-block",
+                  marginTop: "10px",
+                  color: "#e1bb7f",
+                  fontWeight: 600,
+                  fontSize: "1rem",
+                  wordBreak: "break-word",
+                }}
+              >
+                contact@marcfloors.com
               </a>
 
               <div className="contact-list">
@@ -292,7 +349,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <strong>Availability</strong>
-                  <span>Call or text directly for quotes</span>
+                  <span>Call, text or email directly for quotes</span>
                 </div>
               </div>
 
