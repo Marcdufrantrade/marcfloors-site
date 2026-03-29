@@ -9,7 +9,7 @@ export default function HomePage() {
     () =>
       Array.from({ length: 22 }, (_, i) => ({
         src: `/images/floor${i + 1}.jpg`,
-        alt: `Marc Floors flooring project ${i + 1}`,
+        alt: `Marc Floors project ${i + 1}`,
       })),
     []
   );
@@ -38,12 +38,12 @@ export default function HomePage() {
         <header className="site-header">
           <div className="container header-inner">
             <Link href="/" className="brand" aria-label="Marc Floors home">
-              <div className="brand-mark">
+              <div className="brand-frame">
                 <Image
                   src="/logo.png"
                   alt="Marc Floors"
                   width={260}
-                  height={96}
+                  height={86}
                   priority
                   className="brand-logo"
                 />
@@ -54,6 +54,7 @@ export default function HomePage() {
               <a href="#services">Services</a>
               <a href="#about">About</a>
               <a href="#gallery">Gallery</a>
+              <a href="#reviews">Reviews</a>
               <a href="#contact">Contact</a>
               <a className="call-button" href="tel:+12797901575">
                 Call (279) 790-1575
@@ -63,31 +64,76 @@ export default function HomePage() {
         </header>
 
         <section className="hero">
-          <div className="hero-overlay" />
-          <div className="container hero-content">
-            <span className="section-kicker">Marc Floors</span>
-            <h1>Premium flooring installation with a strong, clean finish.</h1>
-            <p className="hero-text">
-              Professional hardwood, laminate, LVP and vinyl installation with
-              detail-oriented execution, clean presentation and work built to
-              inspire confidence from the first impression.
-            </p>
+          <div className="hero-bg" />
+          <div className="container hero-grid">
+            <div className="hero-copy">
+              <span className="eyebrow">Marc Floors</span>
+              <h1>Flooring installation with a premium finish and a stronger visual standard.</h1>
+              <p className="hero-text">
+                Professional hardwood, laminate, LVP and vinyl installation
+                designed to make the space feel cleaner, sharper and more
+                valuable from the first impression.
+              </p>
 
-            <div className="hero-actions">
-              <a className="call-button hero-btn" href="tel:+12797901575">
-                Call Now
-              </a>
-              <a className="ghost-button hero-btn" href="#gallery">
-                View Gallery
-              </a>
+              <div className="hero-actions">
+                <a className="call-button hero-btn" href="tel:+12797901575">
+                  Call Now
+                </a>
+                <a className="ghost-button hero-btn" href="#gallery">
+                  View Projects
+                </a>
+              </div>
+
+              <div className="hero-tags">
+                <span>Hardwood</span>
+                <span>Laminate</span>
+                <span>LVP</span>
+                <span>Vinyl</span>
+                <span>Professional Finish</span>
+              </div>
             </div>
 
-            <div className="hero-badges">
-              <span>Hardwood</span>
-              <span>Laminate</span>
-              <span>LVP</span>
-              <span>Vinyl</span>
-              <span>Professional Finish</span>
+            <div className="hero-panel">
+              <div className="hero-panel-image">
+                <Image
+                  src="/images/hero-floor.jpg"
+                  alt="Professional flooring installation by Marc Floors"
+                  width={900}
+                  height={1100}
+                  priority
+                  className="hero-panel-photo"
+                />
+              </div>
+
+              <div className="hero-panel-card hero-panel-card-top">
+                <span className="mini-kicker">Quality Focus</span>
+                <strong>Clean layout. Strong finish. Better presentation.</strong>
+              </div>
+
+              <div className="hero-panel-card hero-panel-card-bottom">
+                <div>
+                  <span className="mini-kicker">Direct contact</span>
+                  <strong>(279) 790-1575</strong>
+                </div>
+                <a href="#contact">Request a quote</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="trust-strip">
+          <div className="container trust-strip-inner">
+            <div>
+              <span className="trust-label">Installation Types</span>
+              <strong>Hardwood · Laminate · LVP · Vinyl</strong>
+            </div>
+            <div>
+              <span className="trust-label">Approach</span>
+              <strong>Clean execution and strong visual finish</strong>
+            </div>
+            <div>
+              <span className="trust-label">Contact</span>
+              <strong>(279) 790-1575</strong>
             </div>
           </div>
         </section>
@@ -95,87 +141,75 @@ export default function HomePage() {
         <section id="services" className="section section-light">
           <div className="container">
             <div className="section-heading">
-              <span className="section-kicker dark-kicker">Services</span>
-              <h2>Flooring work done with precision, presentation and reliability</h2>
+              <span className="section-kicker">Services</span>
+              <h2>Professional flooring work built around finish quality</h2>
               <p>
-                Every project is approached with attention to finish quality,
-                alignment, transitions and overall visual impact.
+                Every project should feel clean, balanced and professionally
+                completed, not merely installed.
               </p>
             </div>
 
             <div className="services-grid">
               <article className="service-card">
+                <div className="service-number">01</div>
                 <h3>Hardwood Installation</h3>
                 <p>
-                  Nail down and glue down hardwood installation with proper
-                  layout, clean transitions and a high-end finished result.
+                  Nail down and glue down hardwood with careful layout,
+                  transitions and final presentation.
                 </p>
               </article>
 
               <article className="service-card">
+                <div className="service-number">02</div>
                 <h3>Laminate Flooring</h3>
                 <p>
-                  Clean laminate installation with tight pattern flow, proper
-                  spacing and sharp final presentation.
+                  Tight alignment, clean pattern flow and a finished look that
+                  feels sharp and intentional.
                 </p>
               </article>
 
               <article className="service-card">
+                <div className="service-number">03</div>
                 <h3>LVP / Vinyl Flooring</h3>
                 <p>
-                  Modern durable flooring installed with careful execution,
-                  strong aesthetics and attention to detail.
+                  Modern durable flooring installed with attention to detail,
+                  finish consistency and overall aesthetics.
                 </p>
               </article>
             </div>
           </div>
         </section>
 
-        <section id="about" className="section section-dark about-section">
+        <section id="about" className="section section-dark">
           <div className="container about-grid">
-            <div className="about-content">
+            <div className="about-copy">
               <span className="section-kicker">About Marc Floors</span>
-              <h2>A flooring company focused on workmanship, trust and a professional result</h2>
+              <h2>A flooring company centered on workmanship, cleanliness and trust.</h2>
               <p>
-                Marc Floors is built around quality installation and strong job
-                presentation. The goal is simple: deliver flooring work that
-                looks clean, feels solid and gives the client confidence in the
-                result.
+                Marc Floors is built around the idea that flooring changes the
+                entire perception of a space. The work should feel precise,
+                visually clean and professionally finished from edge to edge.
               </p>
               <p>
                 From hardwood and laminate to LVP and vinyl, each project is
-                handled with care for layout, finish details and overall visual
-                impact, because flooring changes the entire impression of a
-                space.
+                approached with care for layout, transitions, alignment and the
+                overall look of the final result.
               </p>
-
-              <div className="about-points">
-                <div className="about-point">
-                  <strong>Clean execution</strong>
-                  <span>Strong attention to finish and detail.</span>
-                </div>
-                <div className="about-point">
-                  <strong>Reliable communication</strong>
-                  <span>Direct contact and clear project coordination.</span>
-                </div>
-                <div className="about-point">
-                  <strong>Client-ready presentation</strong>
-                  <span>Work that looks professional from first glance.</span>
-                </div>
-              </div>
             </div>
 
-            <div className="about-side-card">
-              <span className="mini-label">Why clients choose Marc Floors</span>
-              <ul>
-                <li>Professional hardwood, laminate, LVP and vinyl installation</li>
-                <li>Careful layout and clean final finish</li>
-                <li>Direct phone contact for quotes and scheduling</li>
-                <li>Strong visual standards for every completed project</li>
-              </ul>
-              <a className="call-button about-call" href="tel:+12797901575">
-                Call (279) 790-1575
-              </a>
+            <div className="about-aside">
+              <div className="about-stat">
+                <span>What clients want</span>
+                <strong>Work that looks high-end, not generic</strong>
+              </div>
+              <div className="about-stat">
+                <span>What Marc Floors delivers</span>
+                <strong>Clean execution and stronger visual presentation</strong>
+              </div>
+              <div className="about-stat">
+                <span>Best contact</span>
+                <strong>(279) 790-1575</strong>
+              </div>
             </div>
           </div>
         </section>
@@ -184,25 +218,29 @@ export default function HomePage() {
           <div className="container">
             <div className="section-heading gallery-heading">
               <span className="section-kicker dark-kicker">Gallery</span>
-              <h2>An elegant presentation of recent flooring work</h2>
+              <h2>Selected flooring projects</h2>
               <p>
-                Click any project to open the full image. The first row is
-                featured larger to give the section a stronger presentation.
+                A cleaner, more editorial presentation. Click any image to open
+                it full size.
               </p>
             </div>
 
-            <div className="gallery-masonry">
+            <div className="gallery-grid">
               {galleryImages.map((image, index) => {
-                const featured =
-                  index === 0 || index === 5 || index === 10 || index === 15;
+                const layoutClass =
+                  index === 0 || index === 7 || index === 14
+                    ? "gallery-item wide"
+                    : index === 3 || index === 11 || index === 18
+                    ? "gallery-item tall"
+                    : "gallery-item";
 
                 return (
                   <button
                     key={image.src}
                     type="button"
-                    className={`gallery-card ${featured ? "featured" : ""}`}
+                    className={layoutClass}
                     onClick={() => setSelectedIndex(index)}
-                    aria-label={`Open image ${index + 1}`}
+                    aria-label={`Open project ${index + 1}`}
                   >
                     <Image
                       src={image.src}
@@ -211,8 +249,8 @@ export default function HomePage() {
                       height={900}
                       className="gallery-image"
                     />
-                    <span className="gallery-card-overlay">
-                      <span className="gallery-card-label">View Project</span>
+                    <span className="gallery-overlay">
+                      <span className="gallery-chip">View Project</span>
                     </span>
                   </button>
                 );
@@ -221,46 +259,82 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="contact" className="section section-light">
+        <section id="reviews" className="section section-light reviews-section">
           <div className="container">
-            <div className="contact-grid">
-              <div className="contact-copy">
-                <span className="section-kicker dark-kicker">Contact</span>
-                <h2>Ready to talk about your flooring project?</h2>
-                <p>
-                  Marc Floors provides professional flooring installation with a
-                  clean and dependable approach. Call directly to discuss your
-                  project, ask questions or request a quote.
-                </p>
-                <p>
-                  Whether the job is hardwood, laminate, LVP or vinyl, the focus
-                  stays the same: quality workmanship, clean presentation and a
-                  result that feels professionally done.
-                </p>
-              </div>
+            <div className="section-heading">
+              <span className="section-kicker">Reviews</span>
+              <h2>The kind of experience clients expect</h2>
+              <p>
+                This section brings back the trust layer the site needed,
+                without looking like a cheap template.
+              </p>
+            </div>
 
-              <div className="contact-card">
-                <h3>Get in touch</h3>
-                <p>Call or text directly for quotes and scheduling.</p>
-                <a className="call-button contact-button" href="tel:+12797901575">
-                  (279) 790-1575
-                </a>
+            <div className="reviews-grid">
+              <article className="review-card">
+                <div className="stars">★★★★★</div>
+                <p>
+                  Clean work, strong attention to detail and a finished result
+                  that makes the entire space feel elevated.
+                </p>
+              </article>
 
-                <div className="contact-lines">
-                  <div>
-                    <strong>Company</strong>
-                    <span>Marc Floors</span>
-                  </div>
-                  <div>
-                    <strong>Specialty</strong>
-                    <span>Hardwood, Laminate, LVP & Vinyl</span>
-                  </div>
-                  <div>
-                    <strong>Service</strong>
-                    <span>Professional installation and finish work</span>
-                  </div>
+              <article className="review-card">
+                <div className="stars">★★★★★</div>
+                <p>
+                  Professional communication, dependable scheduling and a final
+                  presentation that feels polished and client-ready.
+                </p>
+              </article>
+
+              <article className="review-card">
+                <div className="stars">★★★★★</div>
+                <p>
+                  The difference is visible in the layout, the finish and the
+                  overall quality of the completed flooring work.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="section contact-section">
+          <div className="container contact-grid">
+            <div className="contact-copy">
+              <span className="section-kicker">Contact</span>
+              <h2>Ready to discuss your project?</h2>
+              <p>
+                Marc Floors provides professional hardwood, laminate, LVP and
+                vinyl installation with a clean process and a stronger finish.
+              </p>
+              <p>
+                Call or text directly for quotes, scheduling and project
+                questions.
+              </p>
+            </div>
+
+            <div className="contact-card">
+              <h3>Marc Floors</h3>
+              <a className="contact-phone" href="tel:+12797901575">
+                (279) 790-1575
+              </a>
+              <div className="contact-list">
+                <div>
+                  <strong>Specialty</strong>
+                  <span>Hardwood, Laminate, LVP & Vinyl</span>
+                </div>
+                <div>
+                  <strong>Focus</strong>
+                  <span>Professional installation and finish quality</span>
+                </div>
+                <div>
+                  <strong>Best way to reach</strong>
+                  <span>Call or text directly</span>
                 </div>
               </div>
+              <a className="call-button contact-button" href="tel:+12797901575">
+                Call Now
+              </a>
             </div>
           </div>
         </section>
@@ -268,15 +342,13 @@ export default function HomePage() {
         <footer className="site-footer">
           <div className="container footer-inner">
             <div className="footer-brand">
-              <div className="footer-logo-wrap">
-                <Image
-                  src="/logo.png"
-                  alt="Marc Floors"
-                  width={180}
-                  height={64}
-                  className="footer-logo"
-                />
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Marc Floors"
+                width={190}
+                height={64}
+                className="footer-logo"
+              />
             </div>
             <p>© {new Date().getFullYear()} Marc Floors. All rights reserved.</p>
           </div>
