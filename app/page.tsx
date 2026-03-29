@@ -301,64 +301,72 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="contact" className="section contact-section">
-          <div className="container contact-grid">
-            <div className="contact-copy">
-              <span className="section-kicker">Contact</span>
-              <h2>Ready to talk about your flooring project?</h2>
-              <p>
-                Marc Floors provides professional hardwood, laminate, LVP and
-                vinyl installation with a clean process and a strong finished
-                result.
-              </p>
-              <p>
-                Call, text or email directly for quotes, project questions and
-                scheduling.
-              </p>
-            </div>
+       <section id="contact" className="section contact-section">
+  <div className="container contact-wrap">
+    <div className="contact-intro">
+      <span className="section-kicker">Contact</span>
+      <h2>Ready to talk about your flooring project?</h2>
+      <p>
+        Marc Floors provides professional hardwood, laminate, LVP and vinyl
+        installation with a clean process and a strong finished result.
+      </p>
+      <p>
+        Reach out directly for quotes, scheduling or project questions.
+      </p>
 
-            <div className="contact-card">
-              <h3>Marc Floors</h3>
+      <div className="contact-highlights">
+        <div className="contact-highlight">
+          <strong>Professional installation</strong>
+          <span>Hardwood, Laminate, LVP & Vinyl</span>
+        </div>
+        <div className="contact-highlight">
+          <strong>Direct communication</strong>
+          <span>Call, text or email for a fast response</span>
+        </div>
+      </div>
+    </div>
 
-              <a className="contact-phone" href="tel:+12797901575">
-                (279) 790-1575
-              </a>
+    <div className="contact-panel">
+      <span className="contact-panel-label">Marc Floors</span>
 
-              <a
-                href="mailto:contact@marcfloors.com"
-                style={{
-                  display: "inline-block",
-                  marginTop: "10px",
-                  color: "#e1bb7f",
-                  fontWeight: 600,
-                  fontSize: "1rem",
-                  wordBreak: "break-word",
-                }}
-              >
-                contact@marcfloors.com
-              </a>
+      <a className="contact-main-phone" href="tel:+12797901575">
+        (279) 790-1575
+      </a>
 
-              <div className="contact-list">
-                <div>
-                  <strong>Services</strong>
-                  <span>Hardwood, Laminate, LVP & Vinyl</span>
-                </div>
-                <div>
-                  <strong>Focus</strong>
-                  <span>Installation quality and clean visual finish</span>
-                </div>
-                <div>
-                  <strong>Availability</strong>
-                  <span>Call, text or email directly for quotes</span>
-                </div>
-              </div>
+      <a className="contact-email" href="mailto:info@marcfloors.com">
+        info@marcfloors.com
+      </a>
 
-              <a className="call-button contact-button" href="tel:+12797901575">
-                Call Now
-              </a>
-            </div>
-          </div>
-        </section>
+      <div className="contact-divider" />
+
+      <div className="contact-meta">
+        <div className="contact-meta-item">
+          <span>Services</span>
+          <strong>Hardwood, Laminate, LVP & Vinyl</strong>
+        </div>
+
+        <div className="contact-meta-item">
+          <span>Focus</span>
+          <strong>Installation quality and clean visual finish</strong>
+        </div>
+
+        <div className="contact-meta-item">
+          <span>Availability</span>
+          <strong>Call, text or email directly for quotes</strong>
+        </div>
+      </div>
+
+      <div className="contact-actions">
+        <a className="call-button contact-action-button" href="tel:+12797901575">
+          Call Now
+        </a>
+        <a className="contact-secondary-button" href="mailto:info@marcfloors.com">
+          Send Email
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
         <footer className="site-footer">
           <div className="container footer-inner">
