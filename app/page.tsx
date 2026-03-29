@@ -70,19 +70,24 @@ export default function Home() {
       </section>
 
       {/* GALLERY */}
-      <section id="gallery" className="section dark">
-        <div className="container">
-          <h2>Recent Work</h2>
-          <div className="gallery">
-            <Image src="/images/floor1.jpg" alt="" width={400} height={300} />
-            <Image src="/images/floor2.jpg" alt="" width={400} height={300} />
-            <Image src="/images/floor3.jpg" alt="" width={400} height={300} />
-            <Image src="/images/floor4.jpg" alt="" width={400} height={300} />
-            <Image src="/images/floor5.jpg" alt="" width={400} height={300} />
-            <Image src="/images/floor6.jpg" alt="" width={400} height={300} />
-          </div>
+<section id="gallery" className="section dark">
+  <div className="container">
+    <h2>Recent Work</h2>
+
+    <div className="gallery">
+      {Array.from({ length: 22 }, (_, i) => (
+        <div key={i} className="gallery-item">
+          <Image
+            src={`/images/floor${i + 1}.jpg`}
+            alt={`Flooring project ${i + 1}`}
+            width={400}
+            height={300}
+          />
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* CONTACT */}
       <section id="contact" className="section">
